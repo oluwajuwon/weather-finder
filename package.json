@@ -1,0 +1,18 @@
+{
+  "name": "simple-node-weather-app",
+  "version": "1.0.0",
+  "description": "first node weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oluwajuwon/weather-finder.git"
+  },
+  "author": "Oluwajuwon",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.87.0"
+  }
+}
