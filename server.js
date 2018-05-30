@@ -23,10 +23,12 @@ app.post('/', function (req, res) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let weather = JSON.parse(body)
+      let username = req.body.username;/*this was supposed to declare the variable username*/
+      console.log(username);
       if(weather.main == undefined){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
-        let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}!`;
+        let weatherText = `Hi, ${req.body.username} It's ${weather.main.temp} degrees in ${weather.name}!`;
         res.render('index', {weather: weatherText, error: null});
       }
     }
