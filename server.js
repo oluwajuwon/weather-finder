@@ -31,7 +31,7 @@ app.post('/', function (req, res) {
       if(weather.main == undefined){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
-        let weatherText = `Hi, ${req.body.username} It's ${roundto.up(celcius(weather.main.temp), 2)} degrees in ${weather.name}!`;
+        let weatherText = `Hi, ${req.body.username} It's ${roundto.up(celcius(weather.main.temp), 2)} degrees Celcius in ${weather.name}!`;
         res.render('index', {weather: weatherText, error: null});
       }
     }
