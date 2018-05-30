@@ -2,8 +2,10 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const request = require('request');
+let celcius = require('fahrenheit-to-celsius');
 const app = express()
 const apiKey = '2bd371a75969e21456159bf64eb330e1';
+
 
 
 app.use(express.static('public'));
@@ -28,7 +30,7 @@ app.post('/', function (req, res) {
       if(weather.main == undefined){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
-        let weatherText = `Hi, ${req.body.username} It's ${weather.main.temp} degrees in ${weather.name}!`;
+        let weatherText = `Hi, ${req.body.username} It's ${celcius(weather.main.temp)} degrees in ${weather.name}!`;
         res.render('index', {weather: weatherText, error: null});
       }
     }
