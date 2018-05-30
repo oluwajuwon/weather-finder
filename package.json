@@ -18,6 +18,7 @@
     "express": "^4.16.3",
     "fahrenheit-to-celsius": "^1.0.0",
     "request": "^2.87.0",
+    "round-to": "^3.0.0",
     "temp-units-conv": "^1.0.2",
     "yargs": "^11.0.0"
   }
